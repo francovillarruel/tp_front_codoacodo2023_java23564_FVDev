@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{ 
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+    max-width:100%;
+}
+ 
+.tituloChicoOradores {
+    font-size: .75rem;
+    padding-top: .5rem;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.convierteteEnUn {
+    font-size: .75rem;
+    padding-top: 1.7rem;
+    text-align: center; 
+    padding-bottom: .3rem;
+}
+
+.anotateComoOrador {
+    font-size: .95rem;
+    padding-top: .5rem;
+    text-align: center; 
+}
+
+.tituloOradores {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.oradores {
+    display: flex;
+    justify-content: center;
+}
+
+.orador {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.orador img {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.cont {
+    padding: 1rem;
+}
+
+#conoceMas {
+    color:white;
+    padding: .5rem .75rem .48rem .8rem;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: .7rem;
+}
+
+#charlaInnite {
+    color: black;
+    font-size: .95rem;
+    text-decoration:underline dotted;
+}
+
+#quieroSerOrador {
+    color:white;
+    padding: .5rem .75rem .48rem .8rem;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 1.17rem;
+}
+
+#comprarTicket {
+    background-color: rgb(41,167,68); 
+    color:white;  
+    padding: .65rem 1.1rem .65rem 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.17rem;
+} 
+
+.formNombyApe {
+    width: 18.5rem;
+    margin-right: 0.8rem;
+    margin-left: 0.9rem;
+    margin-bottom: 1rem; 
+    padding: .3rem;
+    border-color: rgb(205, 212, 218); 
+    border: 1px solid rgb(205, 212, 218);
+    border-radius: .2rem;
+}
+
+.formTemario {
+    width: 620px;
+    padding: .7rem .7rem 5rem .9rem;
+    border-color: rgb(205, 212, 218); 
+    border: 1px solid rgb(205, 212, 218);
+    border-radius: .2rem;
+    font-size: 1rem;
+}
+
+.recuerdaIncluir {
+    font-size: .7rem;
+    margin-top: 10px;
+    padding-left: 20px;
+    color:rgb(108,118,128);
+}
+
+
+.o-50 {
+    filter: brightness(.5);
+}
+
+.bgGrisOscuro {
+    background-color: rgb(53, 58, 64);
+}
+
+.textoGrisOscuro {
+    color: rgb(53, 58, 64);
+}
+
+.imgDark {
+    filter: brightness(.7);
+}
+
+.textoBlancoB {
+    font-weight: bold;
+    color: white;
+}
+
+.textoBlanco {
+    color: white;
+}
+
+.textoGris {
+    background-color: rgb(53, 58, 64);
+    color: rgb(154,158,159);
+}
+
+.textoVerde {
+    background-color: rgb(53, 58, 64);
+    color: rgb(62, 235, 102);
+}
+
+.textoVerdeB1 {
+    background-color: rgb(53, 58, 64);
+    color: rgb(62, 235, 102);
+}
+
+
+.resultado-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  
+  .resultado-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s;
+  }

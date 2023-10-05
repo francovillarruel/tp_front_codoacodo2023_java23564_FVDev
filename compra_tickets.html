@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compra de Tickets</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+      <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"   />
+
+      <link rel="stylesheet" href="./estilos.css">
+
+</head>
+
+<body>
+     <nav class="navbar navbar-expand-lg navbar-dark bgGrisOscuro">
+        <div class="container-fluid ">
+            <div class="col-6 col-lg-3">
+                <img src="./imagenes/codoacodo.png" alt="" class="w-25">               
+                <a class="navbar-brand textoGris bgGrisOscuro" href="./tp_front_codoacodo2023.html">Conf BsAs</a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav me-2">
+                    <div class="nav-item">
+                        <a class="nav-link textoBlancoB1 bgGrisOscuro" href="#">La conferencia</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link textoGris bgGrisOscuro" href="#">Los oradores</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link textoGris bgGrisOscuro" href="#">El lugar y la fecha</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link textoGris bgGrisOscuro" href="./tp_front_codoacodo2023.html#convierteteEnUn">Conviértete en un orador</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link textoVerde bgGrisOscuro" href="./compra_tickets.html">Comprar ticket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+     <div class="container my-4"  >
+        <form action="./compra_tickets.html" method="post" class="needs-validation" novalidate>
+            <div class="row">
+                <div class="col mb-3">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Debes ingresar tu Nombre.
+                    </div>
+                
+                </div>
+                <div class="col mb-3">
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Debes ingresar tu Apellido.
+                    </div>                    
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="number" name="cant" id="cant" onchange="calcTotal()"  onkeyup="calcTotal()"  placeholder="Cantidad de Tickets" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Debes ingresar una cantidad de Tickets VÁLIDOS.
+                    </div>
+                    <div class="small">
+                        Valor Ticket $1000
+                    </div>
+                </div>
+                <div class="col">
+                    <select class="form-select" id="desc" onchange="calcTotal()">
+                        <option value="50">Estudiante 50%</option>
+                        <option value="30">Orador 30%</option>
+                        <option value="10">Pago en Efectivo 10%</option>
+                    </select>                
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3 bg-info p-1">
+                    ¡Total a pagar! $ <span id="total" >0</span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <input type="submit" value="Comprar" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+
+    <div id="resultadoContainer" class="resultado-container"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="./compra.js"></script>    
+</body>
+
+</html>
